@@ -6,13 +6,15 @@ set -e
 cat /etc/security/limits.conf | grep -v oracle | tee /etc/security/limits.conf
 
 echo 'Downloading linux.x64_11gR2_database_1of2.zip'
-wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn/linux/oracle11g/R2/linux.x64_11gR2_database_1of2.zip" -O linux.x64_11gR2_database_1of2.zip
+file1="linux.x64_11gR2_database_1of2.zip"
+file2="linux.x64_11gR2_database_2of2.zip"
+[ ! -f $file1 ] && wget https://goo.gl/7PxXGU -O $file1
 echo 'Downloading linux.x64_11gR2_database_2of2.zip'
-wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn/linux/oracle11g/R2/linux.x64_11gR2_database_1of2.zip" -O linux.x64_11gR2_database_2of2.zip
+[ ! -f $file2 ] && wget https://goo.gl/dapBrB -O $file2
 echo 'Unzipping'
 cd /install
-unzip -q linux.x64_11gR2_database_1of2.zip
-unzip -q linux.x64_11gR2_database_2of2.zip
+unzip -q $file1
+unzip -q $file2
 rm -f linux*.zip
 
 mv database /home/oracle/
