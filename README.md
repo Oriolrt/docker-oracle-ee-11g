@@ -32,5 +32,8 @@ username: system
 password: oracle  
 Password for SYS & SYSTEM  
 
-
+To connect by ssh, the user and pasword are both *oracle*:
+```
+ssh -p 55121 oracle@localhost
+``` 
 
