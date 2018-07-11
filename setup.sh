@@ -12,9 +12,9 @@ yum install -y yum install \
 	openssh-server \
 	passwd \
 	vim \
-       	vixie-cron &&\
-       	yum clean all &&\
-	 rm -rf /var/cache/yum
+    vixie-cron &&\
+    yum clean all &&\
+	rm -rf /var/cache/yum
 
 mkdir /u01 && chown oracle:dba /u01
 recovery_files="/u02/recovery_files"
