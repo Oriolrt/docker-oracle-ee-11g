@@ -2,7 +2,7 @@
 Oracle Enterprese Edition 11g Release 2 on OracleLinux distriibution 
 
 ## Prerequisites:
-Download Oracle Edition from [Oracle's](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/112010-linx8664soft-100572.html) site:
+Download Oracle Edition from [Oracle's](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/112010-linx8664soft-100572.html) site and copy them into the *install* folder:
 
 - linux.x64_11gR2_database_1of2.zip 
 - linux.x64_11gR2_database_2of2.zip
