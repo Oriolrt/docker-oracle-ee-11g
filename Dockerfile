@@ -34,4 +34,5 @@ EXPOSE 22
 EXPOSE 8080
 EXPOSE 1521
 
-ENTRYPOINT ["/entrypoint.sh"]
+CMD bash
+#ENTRYPOINT ["/entrypoint.sh"]

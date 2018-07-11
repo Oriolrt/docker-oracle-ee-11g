@@ -8,9 +8,9 @@ cat /etc/security/limits.conf | grep -v oracle | tee /etc/security/limits.conf
 echo 'Downloading linux.x64_11gR2_database_1of2.zip'
 file1="linux.x64_11gR2_database_1of2.zip"
 file2="linux.x64_11gR2_database_2of2.zip"
-[ ! -f $file1 ] && wget https://goo.gl/ZYiWPw   -O $file1
+[ ! -f $file1 ] && wget  https://goo.gl/pnWekP   -O $file1
 echo 'Downloading linux.x64_11gR2_database_2of2.zip'
-[ ! -f $file2 ] && wget https://goo.gl/HdAh93  -O $file2
+[ ! -f $file2 ] && wget https://goo.gl/As8d9p  -O $file2
 #cd /install
 echo 'Unzipping'
 unzip -q $file1
