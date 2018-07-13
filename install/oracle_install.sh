@@ -7,7 +7,7 @@ cat /etc/security/limits.conf | grep -v oracle | tee /etc/security/limits.conf
 
 Final="https://od.lk/d/MjFfMTIxMjAyMzFf/linux11gR2.zip"
 prefix="https://od.lk/d/MjFfMTIxMjAyMzFf/linux11gR2.z"
-wget --limit-rate 1m ${prefix}{01..22}
+wget --limit-rate 500k ${prefix}{01..22}
 #for i in $(seq 1 22)
 #do
 #	nom="$prefix$( printf '%.2d' $i )";
