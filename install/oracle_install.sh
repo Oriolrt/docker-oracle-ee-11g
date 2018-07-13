@@ -7,12 +7,13 @@ cat /etc/security/limits.conf | grep -v oracle | tee /etc/security/limits.conf
 
 Final="https://od.lk/d/MjFfMTIxMjAyMzFf/linux11gR2.zip"
 prefix="https://od.lk/d/MjFfMTIxMjAyMzFf/linux11gR2.z"
-for i in $(seq 1 22)
-do
-	nom="$prefix$( printf '%.2d' $i )";
-    echo "downloading ${nom}"
-    wget $nom 
-done
+wget --limit-rate 60k $prefix{01..22}
+#for i in $(seq 1 22)
+#do
+#	nom="$prefix$( printf '%.2d' $i )";
+#    echo "downloading ${nom}"
+#    wget $nom 
+#done
 wget $Final 
 zip -s 0 linux11gR2.zip --out complete.zip
 echo 'Unzipping'
