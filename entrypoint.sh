@@ -5,7 +5,7 @@ set -e
 echo "Starting ssh service... "
 /usr/sbin/sshd -D & 
 echo "Starting cron service..."
-crontd start &
+crond start &
 
 # Prevent owner issues on mounted folders
 echo "Preparing oracle installer."
